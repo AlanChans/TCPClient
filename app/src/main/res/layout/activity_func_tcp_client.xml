@@ -1,0 +1,192 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/ic_launcher_background"
+    tools:context=".FuncTcpClient"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_weight="20">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_weight="4"
+            android:orientation="horizontal">
+
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:textSize="25dp"
+                android:text="IP:"/>
+
+            <EditText
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="2"
+                android:id="@+id/edit_tcpClientIP"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:textSize="25dp"
+                android:text="PORT:"/>
+
+            <EditText
+                android:id="@+id/edit_tcpClientPort"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"/>
+
+
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="2dp"
+            android:layout_weight="3"
+            android:orientation="horizontal">
+
+            <CheckBox
+                android:id="@+id/cb_remember_data"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:text="记住数据"/>
+
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="5">
+
+            <Button
+                android:id="@+id/btn_tcpClientConn"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="连接" />
+
+            <Button
+                android:id="@+id/btn_tcpClientClose"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="断开" />
+
+            <!--<Button-->
+            <!--android:id="@+id/btn_tcpCleanClientRecv"-->
+            <!--android:layout_width="wrap_content"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:text="清楚接收区" />-->
+
+            <!--<Button-->
+            <!--android:id="@+id/btn_tcpCleanClientSend"-->
+            <!--android:layout_width="match_parent"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:text="清除发" />-->
+
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="100dp"
+            android:orientation="vertical"
+            android:layout_weight="8">
+
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1"
+                android:textSize="20dp"
+                android:text="通过产品的数量(单位：个):"/>
+
+            <TextView
+                android:id="@+id/txt_ClientRcv"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="5"
+                android:textSize="28dp"
+                android:layout_gravity="center"
+                android:background="@android:color/holo_blue_light" />
+
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="5"
+            android:orientation="horizontal"
+            >
+            <Button
+                android:id="@+id/btn_setNumber"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:text="设置预置数"/>
+
+            <EditText
+                android:id="@+id/edit_setNumber"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_gravity="fill_horizontal"/>
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="5"
+            android:orientation="horizontal">
+
+            <Button
+                android:id="@+id/btn_setOn"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_gravity="left"
+                android:text="启动传送带" />
+            <Button
+                android:id="@+id/btn_setOff"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:text="关闭传送带"/>
+
+        </LinearLayout>
+        <!--<LinearLayout-->
+        <!--android:layout_width="match_parent"-->
+        <!--android:layout_height="5dp"-->
+        <!--android:orientation="vertical"-->
+        <!--android:layout_weight="2">-->
+        <!--<TextView-->
+        <!--android:layout_width="wrap_content"-->
+        <!--android:layout_height="0dp"-->
+        <!--android:layout_weight="1"-->
+        <!--android:text="发送区："/>-->
+        <!--<TextView-->
+        <!--android:layout_width="match_parent"-->
+        <!--android:layout_height="0dp"-->
+        <!--android:layout_weight="4"-->
+        <!--android:background="@android:color/holo_purple"-->
+        <!--android:id="@+id/txt_ClientSend"/>-->
+
+        <!--</LinearLayout>-->
+        <!--<LinearLayout-->
+        <!--android:layout_width="match_parent"-->
+        <!--android:layout_height="0dp"-->
+        <!--android:orientation="horizontal"-->
+        <!--android:layout_weight="2">-->
+        <!--<EditText-->
+        <!--android:layout_width="0dp"-->
+        <!--android:layout_weight="5"-->
+        <!--android:id="@+id/edit_tcpClientSend"-->
+        <!--android:layout_height="match_parent" />-->
+        <!--<Button-->
+        <!--android:layout_width="0dp"-->
+        <!--android:layout_weight="1"-->
+        <!--android:layout_height="match_parent"-->
+        <!--android:layout_gravity="right"-->
+        <!--android:id="@+id/btn_tcpClientSend"-->
+        <!--android:text="发送"/>-->
+        <!--</LinearLayout>-->
+
+    </LinearLayout>
+
+</LinearLayout>
